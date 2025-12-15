@@ -113,6 +113,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -226,6 +230,57 @@
   .animate-marquee:hover,
   .animate-marquee-reverse:hover {
     animation-play-state: paused;
+  }
+
+  /* Smooth Marquee Animations for TechStack */
+  .animate-marquee-smooth {
+    animation: marquee-smooth 35s linear infinite;
+  }
+
+  .animate-marquee-smooth-reverse {
+    animation: marquee-smooth-reverse 35s linear infinite;
+  }
+
+  .animate-marquee-smooth.paused,
+  .animate-marquee-smooth-reverse.paused {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee-smooth {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-smooth-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* Shine effect animation */
+  @keyframes shine {
+
+    0%,
+    100% {
+      transform: rotate(45deg) translate(-100%, -100%);
+    }
+
+    50% {
+      transform: rotate(45deg) translate(100%, 100%);
+    }
+  }
+
+  .animate-shine {
+    animation: shine 1.5s ease-in-out infinite;
   }
 
 }

@@ -20,8 +20,7 @@ export default function Home() {
             <span className="text-cyan-400">/&gt;</span>
           </div>
           <p className="text-gray-600 text-xs sm:text-sm">
-            © {new Date().getFullYear()} My Portfolio. Powered by Next.js &
-            Tailwind CSS.
+            © {new Date().getFullYear()} My Portfolio.
           </p>
         </div>
       </footer>

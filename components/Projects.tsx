@@ -10,65 +10,36 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
-        title: "E-Commerce Dashboard",
+        title: "Everybe Beauty & Health",
         description:
-            "A comprehensive dashboard for managing online stores with real-time analytics, inventory management, and order tracking.",
+            "Everybe Beauty & Health is a E-commerce platform for beauty and health products.",
+        tags: ["React + Vite", "Express.js", "Tailwind", "Prisma", "Docker", "PostgreSQL"],
+        image: "everybe.png",
+        github: "https://github.com/Mhmdashief",
+        demo: "https://everybe.id/",
+        featured: true,
+    },
+    {
+        title: "CMS Website Project",
+        description:
+            "CMS Website Project is a Content Management System for managing website content.",
         tags: ["Next.js", "Tailwind", "Prisma", "PostgreSQL"],
-        image: "https://placehold.co/600x400/1a1a2e/06b6d4?text=Dashboard",
-        github: "#",
+        image: "cms.png",
+        github: "https://github.com/Mhmdashief",
         demo: "#",
         featured: true,
     },
     {
-        title: "Social Media App",
+        title: "Egg Quality Monitoring System",
         description:
-            "Connect with friends and share your moments. Features include real-time chat, stories, and personalized feed.",
-        tags: ["React", "Firebase", "Redux", "Styled Components"],
-        image: "https://placehold.co/600x400/1a1a2e/a855f7?text=Social+App",
-        github: "#",
-        demo: "#",
-        featured: true,
-    },
-    {
-        title: "AI Chat Assistant",
-        description:
-            "An intelligent chatbot powered by machine learning that can answer questions and assist users.",
-        tags: ["Python", "OpenAI", "FastAPI", "React"],
-        image: "https://placehold.co/600x400/1a1a2e/22c55e?text=AI+Chat",
-        github: "#",
-        demo: "#",
+            "Egg Quality Monitoring System is a system for monitoring egg quality based on image analysis from the shell of the egg.",
+        tags: ["React + Vite", "Tailwind", "Express.js", "MySQL"],
+        image: "eggspire.png",
+        github: "https://github.com/Mhmdashief/update-olivia",
+        demo: "https://drive.google.com/drive/folders/1Ix-cdyhtRYo45vf5LwLucM20HdjDKEnZ?usp=sharing",
         featured: false,
     },
-    {
-        title: "Task Management",
-        description:
-            "A Kanban-style task management app with drag-and-drop functionality and team collaboration features.",
-        tags: ["TypeScript", "Next.js", "Supabase"],
-        image: "https://placehold.co/600x400/1a1a2e/f59e0b?text=Task+App",
-        github: "#",
-        demo: "#",
-        featured: false,
-    },
-    {
-        title: "Portfolio V1",
-        description:
-            "My previous portfolio website showcasing early work with custom animations and interactions.",
-        tags: ["HTML", "CSS", "JavaScript", "GSAP"],
-        image: "https://placehold.co/600x400/1a1a2e/ec4899?text=Portfolio",
-        github: "#",
-        demo: "#",
-        featured: false,
-    },
-    {
-        title: "Weather Dashboard",
-        description:
-            "Real-time weather information with beautiful visualizations and 7-day forecasts.",
-        tags: ["React", "OpenWeather API", "Chart.js"],
-        image: "https://placehold.co/600x400/1a1a2e/3b82f6?text=Weather",
-        github: "#",
-        demo: "#",
-        featured: false,
-    },
+
 ];
 
 export default function Projects() {
@@ -99,7 +70,7 @@ export default function Projects() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-16 md:py-24 bg-[#0a0a0f] relative">
+        <section ref={sectionRef} id="projects" className="py-16 md:py-24 bg-[#0a0a0f] relative">
             {/* Background */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent" />
 
@@ -109,7 +80,7 @@ export default function Projects() {
                         <Folder className="w-3 sm:w-4 h-3 sm:h-4" />
                         Featured Work
                     </div>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                    <h2 className="text-3xl sm:text-4xl md:text-3xl font-bold mb-3 sm:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
                         My Projects
                     </h2>
                     <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base px-4">
@@ -184,8 +155,6 @@ export default function Projects() {
                                     ))}
                                 </div>
                             </div>
-
-                            {/* Bottom Glow Line */}
                             <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>
                     ))}
