@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Tambahkan untuk optimasi
+  
 
 };
 

@@ -175,7 +175,7 @@ export default function About() {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
                             <a
-                                href="https://drive.google.com/file/d/1shi-wCPDGIr7mA55KfiyC_hBKHMyJ-Xn/view?usp=sharing"
+                                href="https://drive.google.com/file/d/16SxPadF1NutQoIPJzuqL8mGBJryHaJ_o/view?usp=sharing"
                                 className="px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 text-center text-sm sm:text-base"
                             >
                                 Download CV

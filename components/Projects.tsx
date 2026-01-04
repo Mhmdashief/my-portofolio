@@ -37,8 +37,19 @@ const projects = [
         image: "eggspire.png",
         github: "https://github.com/Mhmdashief/update-olivia",
         demo: "https://drive.google.com/drive/folders/1Ix-cdyhtRYo45vf5LwLucM20HdjDKEnZ?usp=sharing",
-        featured: false,
+        featured: true,
     },
+
+    {
+        title: "Baheera Hijab E-Commerce",
+        description:
+            "Baheera Hijab E-Commerce is an e-commerce platform for hijab products.",
+        tags: ["Next JS", "Tailwind", "Prisma", "PostgreSQL"],
+        image: "baheera.png",
+        github: "https://github.com/Mhmdashief/baheera-hijab-e-commerce",
+        demo: "https://baheera-hijab-e-commerce.vercel.app/",
+        featured: true,
+    }
 
 ];
 
