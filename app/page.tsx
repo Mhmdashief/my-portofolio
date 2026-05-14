@@ -18,7 +18,7 @@ export default function Home() {
         <div className="container px-4 mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4 text-gray-500 font-mono text-xs sm:text-sm">
             <span className="text-cyan-400">&lt;</span>
-            Built with passion
+            Build with passion
             <span className="text-cyan-400">/&gt;</span>
           </div>
           <p className="text-gray-600 text-xs sm:text-sm">
