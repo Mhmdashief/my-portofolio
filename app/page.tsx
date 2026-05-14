@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
+import Certificates from "@/components/Certificates";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <About />
       <TechStack />
       <Projects />
+      <Certificates />
 
       {/* Footer */}
       <footer className="py-8 md:py-12 bg-[#0d0d12] border-t border-gray-800">
@@ -20,7 +22,7 @@ export default function Home() {
             <span className="text-cyan-400">/&gt;</span>
           </div>
           <p className="text-gray-600 text-xs sm:text-sm">
-            © {new Date().getFullYear()} My Portfolio.
+            © {new Date().getFullYear()} My Portofolio.
           </p>
         </div>
       </footer>

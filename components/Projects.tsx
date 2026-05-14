@@ -26,7 +26,6 @@ const projects = [
         tags: ["Next.js", "Tailwind", "Prisma", "PostgreSQL"],
         image: "cms.png",
         github: "https://github.com/Mhmdashief",
-        demo: "#",
         featured: true,
     },
     {
@@ -49,7 +48,17 @@ const projects = [
         github: "https://github.com/Mhmdashief/baheera-hijab-e-commerce",
         demo: "https://baheera-hijab-e-commerce.vercel.app/",
         featured: true,
-    }
+    },
+
+    {
+        title: "Marketplace UB Merch",
+        description:
+            "Marketplace UB Merch is an e-commerce platform for selling Universitas Brawijaya Official Merchendise.",
+        tags: ["Next JS", "Tailwind", "Prisma", "PostgreSQL"],
+        image: "ub merch.png",
+        github: "https://github.com/Mhmdashief/marketplace-ub-merch",
+        featured: true,
+    },
 
 ];
 
@@ -123,29 +132,28 @@ export default function Projects() {
                                 {/* Overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60" />
                                 <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 sm:gap-4">
-                                    <a
-                                        href={project.github}
-                                        className="p-2 sm:p-3 bg-gray-800 rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300 transform hover:scale-110"
-                                        title="View Code"
-                                    >
-                                        <Github className="w-4 sm:w-5 h-4 sm:h-5" />
-                                    </a>
-                                    <a
-                                        href={project.demo}
-                                        className="p-2 sm:p-3 bg-gray-800 rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-110"
-                                        title="View Live"
-                                    >
-                                        <ExternalLink className="w-4 sm:w-5 h-4 sm:h-5" />
-                                    </a>
+                                    {project.github && (
+                                        <a
+                                            href={project.github}
+                                            className="p-2 sm:p-3 bg-gray-800 rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300 transform hover:scale-110"
+                                            title="View Code"
+                                        >
+                                            <Github className="w-4 sm:w-5 h-4 sm:h-5" />
+                                        </a>
+                                    )}
+                                    {project.demo && (
+                                        <a
+                                            href={project.demo}
+                                            className="p-2 sm:p-3 bg-gray-800 rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-110"
+                                            title="View Live"
+                                        >
+                                            <ExternalLink className="w-4 sm:w-5 h-4 sm:h-5" />
+                                        </a>
+                                    )}
                                 </div>
-
-                                {/* Featured Badge */}
-                                {project.featured && (
-                                    <div className="absolute top-2 sm:top-3 right-2 sm:right-3 px-2 py-1 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-[10px] sm:text-xs text-cyan-400 font-mono">
-                                        Featured
-                                    </div>
-                                )}
+                                {/* End of Overlay */}
                             </div>
+                            {/* End of Project Image Section */}
 
                             {/* Content */}
                             <div className="p-4 sm:p-6 flex-1 flex flex-col">
@@ -174,3 +182,4 @@ export default function Projects() {
         </section>
     );
 }
+

@@ -135,7 +135,7 @@ export default function About() {
 
                             {/* LinkedIn Card */}
                             <a
-                                href="https://www.linkedin.com/in/mochamad-iftichor-al-ashief-81636b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                href="https://www.linkedin.com/in/mochamad-iftichor-al-ashief-a396702ba/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-3 p-3 sm:p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-blue-500/30 transition-colors group text-center sm:text-left"
@@ -173,16 +173,28 @@ export default function About() {
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
-                            <a
-                                href="https://drive.google.com/file/d/16SxPadF1NutQoIPJzuqL8mGBJryHaJ_o/view?usp=sharing"
-                                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 text-center text-sm sm:text-base"
-                            >
-                                Download CV
-                            </a>
+                        <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8">
+                            <div className="flex flex-row gap-2 sm:gap-3 flex-1 sm:flex-initial">
+                                <a
+                                    href="https://drive.google.com/file/d/1DANS63fCt8xiNRVVa31A-vHnNMORXZnW/view?usp=sharing"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 sm:flex-none px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-cyan-600 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 text-center text-xs sm:text-base flex items-center justify-center gap-2"
+                                >
+                                    <span className="hidden sm:inline">CV</span> (IDN)
+                                </a>
+                                <a
+                                    href="https://drive.google.com/file/d/1cAv6J2ZqwkpsJ5JEuuC4Ffg9VM1UiPu1/view?usp=sharing"
+                                    className="flex-1 sm:flex-none px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-purple-600 to-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 text-center text-xs sm:text-base flex items-center justify-center gap-2"
+                                >
+                                    <span className="hidden sm:inline">CV</span> (ENG)
+                                </a>
+                            </div>
                             <a
                                 href="https://wa.me/6287875810413"
-                                className="px-5 sm:px-6 py-2.5 sm:py-3 border border-gray-700 bg-gray-900/50 hover:bg-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 font-medium rounded-lg text-center text-white text-sm sm:text-base"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-5 sm:px-6 py-2.5 sm:py-3 border border-gray-700 bg-gray-900/50 hover:bg-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 font-medium rounded-lg text-center text-white text-sm sm:text-base flex-1 sm:flex-none"
                             >
                                 Let&apos;s Talk
                             </a>
