@@ -67,7 +67,7 @@ export default function About() {
                             {/* Image Container */}
                             <div className="relative rounded-2xl overflow-hidden bg-gray-900">
                                 <Image
-                                    src="/foto.jpg"
+                                    src="/foto.png"
                                     alt="Profile Photo"
                                     width={400}
                                     height={533}

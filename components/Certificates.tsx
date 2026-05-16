@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Award, ExternalLink, Calendar, MapPin } from "lucide-react";
+import { Award, ExternalLink, Calendar, MapPin, X } from "lucide-react";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -86,6 +86,18 @@ const certificates = [
 export default function Certificates() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+    useEffect(() => {
+        if (selectedImage) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [selectedImage]);
 
     useEffect(() => {
         const cards = containerRef.current?.querySelectorAll(".cert-card");
@@ -167,15 +179,13 @@ export default function Certificates() {
 
                             <div className="mt-auto relative z-10 pt-6 border-t border-gray-800 group-hover:border-gray-700 transition-colors">
                                 {cert.image ? (
-                                    <a
-                                        href={cert.image}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                    <button
+                                        onClick={() => setSelectedImage(cert.image)}
                                         className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-white group/btn hover:text-cyan-400 transition-colors"
                                     >
                                         View Certificate
                                         <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                                    </a>
+                                    </button>
                                 ) : (
                                     <span className="text-xs sm:text-sm font-medium text-gray-500 italic">
                                         Certificate pending
@@ -186,6 +196,36 @@ export default function Certificates() {
                     ))}
                 </div>
             </div>
+
+            {/* Image Modal */}
+            {selectedImage && (
+                <div 
+                    className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <button 
+                        onClick={() => setSelectedImage(null)}
+                        className="fixed top-4 right-4 md:top-6 md:right-6 p-2.5 text-gray-300 hover:text-white bg-gray-800/80 hover:bg-gray-700/80 rounded-full transition-all z-[110] shadow-lg"
+                        aria-label="Close modal"
+                    >
+                        <X className="w-6 h-6 md:w-8 md:h-8" />
+                    </button>
+                    
+                    <div 
+                        className="relative max-w-5xl w-full flex items-center justify-center"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <Image 
+                            src={selectedImage} 
+                            alt="Certificate View" 
+                            width={1200}
+                            height={800}
+                            className="w-auto h-auto max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+                            priority
+                        />
+                    </div>
+                </div>
+            )}
         </section>
     );
 }
